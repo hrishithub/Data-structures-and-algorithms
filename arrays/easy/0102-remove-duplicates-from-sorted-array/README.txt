@@ -8,10 +8,13 @@ Note: Return k after placing the final result in the first k slots of the array.
 https://leetcode.com/problems/remove-duplicates-from-sorted-array/#:~:text=Input%3A%20nums%20%3D%20%5B0%2C,%2C%203%2C%20and%204%20respectively.
 
 Brute Force: Use Set (First traverse array and put everything in set and then just traverse set and start replacing element taken out from set with elements in array from start). This will work because set contains unique elements. 
-TC: O(NlogN + K)
-SC: O(K) or O(N) in worst case when given array contains all unique
+Time Complexity- O(NlogN + K)
+Space Complexity- O(K) or O(N) in worst case when given array contains all unique
 
 Optimal: Two Pointer Approach 
-TC: O(N)
-SC: o(1) 
+Time Complexity- O(N)
+Space Complexity- o(1) 
+
+
+ 
 

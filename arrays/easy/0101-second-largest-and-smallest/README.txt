@@ -16,17 +16,19 @@ Brute Force: Sort the array and return element at n-2th index(works if array con
              } 
              return secondLargest;  
  
-  TC- O(NlogN + N)  
-  SC- O(1) 
+Time Complexity- O(NlogN + N)
+Space Complexity- o(1) 
+
 
 Better: First run for loop to find largest and then another for loop to find secondLargest 
-  TC- O(2N)  
-  SC- O(1) 
+Time Complexity- O(2N)
+Space Complexity- o(1) 
 
 
 Optimal: Do it using single for loop (First assume element at 0th index as largest and while looping when you find element greater than largest then that largest is now secondLargest and  newly found element is now largest) 
-  TC- O(N)  
-  SC- O(1) 
+Time Complexity- O(N)
+Space Complexity- o(1) 
+ 
 
 
 
