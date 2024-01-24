@@ -1,4 +1,5 @@
 /*
+https://www.codingninjas.com/studio/problems/ninja-and-the-second-order-elements_6581960?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf 
 Brute: Sort array and then starting from last return el that doesnt match el n-1th index TC- O(NlogN+N)
 
 Better: Run for loop to find largest and then another for loop to find second largest TC- O(2N)

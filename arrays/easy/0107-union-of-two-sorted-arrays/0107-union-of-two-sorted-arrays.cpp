@@ -1,4 +1,5 @@
 /*
+https://www.codingninjas.com/studio/problems/sorted-array_6613259?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
 Brute: Using set as set contain unique el TC- O(N1logN1+N2logN2+K) where K is no. of unique el in wc K can be equal to N1+N2 when both array contain unique el 
 
 Optimal: Using two pointer TC-O(N1+N2) 
