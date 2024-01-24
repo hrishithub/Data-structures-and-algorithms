@@ -1,3 +1,6 @@
+//Brute: Use Set (First traverse array and put everything in set and then just traverse set and start replacing element taken out from set with elements in array from start). This will work because set contains unique elements. TC- O(NlogN+K) SC- O(K)
+//Optimal: Two pointer approach TC- O(N) SC- O(1)
+
 #include<bits/stdc++.h>
 using namespace std;
 
