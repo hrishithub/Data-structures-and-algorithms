@@ -1,5 +1,5 @@
 /*
-Optimal: Two pointer/Sliding window approach
+Optimal: Two pointer/Sliding window approach TC- O(2N) SC- O(1)
 Intuition: We are using two pointers i.e. left and right. The left pointer denotes the starting index of the subarray and the right pointer denotes the ending index.
 Now as we want the longest subarray, we will move the right pointer in a forward direction every time adding the element i.e. a[right] to the sum.
 But when the sum of the subarray crosses k, we will move the left pointer in the forward direction as well to shrink the size of the subarray as well as to decrease the sum.
@@ -40,3 +40,4 @@ int main()
     cout << "The length of the longest subarray is: " << len << "\n";
     return 0;
 }
+ 
