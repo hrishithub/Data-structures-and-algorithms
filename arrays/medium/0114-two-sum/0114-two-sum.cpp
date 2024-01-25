@@ -2,17 +2,17 @@
  https://leetcode.com/problems/two-sum/
  Brute: Use nested for loop TC- O(N^2) SC- O(1)
  Better: Use hashing TC-O(NlogN) (if use ordered map) SC-O(N)
- Optimal: Two pointer approach TC- O(NlogN + N) SC- O(N)
+ Optimal: Two pointer approach TC- O(NlogN + N) SC- O(1)
 */
 
 #include <bits/stdc++.h>
 using namespace std;
 
 vector<int> twoSum(int n, vector<int> &arr, int target) {
-    sort(arr.begin(), arr.end());
+    sort(arr.begin(), arr.end()); //NlogN 
     int left=0,right=arr.size()-1;
 
-    while(left < right){
+    while(left < right){ //N
         if(arr[left]+arr[right] < target) left++;
         else if(arr[left]+arr[right] > target) right--;
         else return {left,right};
