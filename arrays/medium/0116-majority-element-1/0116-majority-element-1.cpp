@@ -1,4 +1,5 @@
-/*
+/* 
+Return majority element(Element that appears more than n/2 times)
 Brute: Use nested for loop TC- O(N) SC- O(1)
 Better: Use hashing (element with freq >n/2 is maj el) TC- If ordered map use O(NlogN) SC-O(N)
 Optimal: Moore's voting algorithm (If there exist a maj el then it won't get fully cancelled by others)
