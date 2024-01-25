@@ -1,5 +1,6 @@
 /*
 Given an array, print all the elements which are leaders. A Leader is an element that is greater than all the elements on its right side in the array.
+https://www.codingninjas.com/studio/problems/superior-elements_6783446?utm_source=striver&utm_medium=website&utm_campaign=codestudio_a_zcourse&leftPanelTabValue=SUBMISSION
 Brute: Use nested for loop, for an element run inner for loop to check whether there is element in array at right side of it which is greater than it if there isn't than that element is leader TC-O(N^2) SC-O(N) to return ans
 Optimal: using single for loop TC-O(N) SC-O(N) to return ans
 when array is in dec order than everyone in array is leader
