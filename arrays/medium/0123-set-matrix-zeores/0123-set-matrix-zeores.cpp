@@ -3,7 +3,7 @@ https://leetcode.com/problems/set-matrix-zeroes/
 Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.You must do it in place.
 Brute: First traverse matrix and for every zero mark every non-zero element in its corresponding row and col as -1 , then traverse again and mark all -1s as 0. TC- O((N*M)(N+M) + (N*M)) ~ O(N^3) SC-O(1)
 Better: Use row[] and col[], TC-O(2(N*M)) SC-O(N+M)
-Optimal:  TC-O(2(N*M)) SC-O(1)
+Optimal: Instead of using extra row[] and col[] for marking, mark in given matrix only wih care. TC-O(2(N*M)) SC-O(1)
 */
 
 #include <bits/stdc++.h>
