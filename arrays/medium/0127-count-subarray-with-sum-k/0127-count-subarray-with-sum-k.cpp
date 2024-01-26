@@ -11,7 +11,7 @@ using namespace std;
 //See dry run below!
 int findAllSubarraysWithGivenSum(vector < int > & arr, int k) {
     int n = arr.size(); // size of the given array.
-    map<int,int> mpp;   //preSum --> count
+    map<int,int> mpp;   //preSum --> count(how many times that preSum occurs) Explantaion below
     int preSum = 0, cnt = 0;
 
     mpp[0] = 1; // Setting 0 in the map. Initially preSum is 0 so count of 0 is 1
@@ -42,19 +42,24 @@ int main()
 /*
     arr= [1,2,3,-3,1,1,1,4,2,-3] k=3
 
-    | 9->1 | cnt=6+2=8  9-3=6 in map
-    | 12->1|            12-3=9 not in map
-    | 10->1|            10-3=7 not in map
-    | 6->2 | cnt=4+2=6  6-3=3 in map
-    | 5->1 |            5-3=2 not in map
-    | 4->1 | cnt=3+1=4  4-3=1 in map
-    | 3->2 | cnt=2+1=3  3-3=0 in map
-    | 6->1 | cnt=1+1=2  6-3=3 in map
-    | 3->1 | cnt=0+1=1  3-3=0 in map
-    | 1->1 |            1-3=-2 not in map
-    | 0->1 |
-    |______|
+  9  | 9->1 | cnt=6+2=8  9-3=6 in map
+  8  | 12->1|            12-3=9 not in map
+  7  | 10->1|            10-3=7 not in map
+  6  | 6->2 | cnt=4+2=6  6-3=3 in map     
+  5  | 5->1 |            5-3=2 not in map
+  4  | 4->1 | cnt=3+1=4  4-3=1 in map
+  3  | 3->2 | cnt=2+1=3  3-3=0 in map
+  2  | 6->1 | cnt=1+1=2  6-3=3 in map
+  1  | 3->1 | cnt=0+1=1  3-3=0 in map  //this is why initially we are storing 0 -> 1 in map
+  0  | 1->1 |            1-3=-2 not in map
+     | 0->1 |
+     |______|
 
+ Why are we storing (pSum --> count) count of pSum occurance in map?
+  At index 6 preSum is 6 so 6-3=3 means for 1 to be last el of subarray with sum k there needs someone from start with pSum 3 and there are two such pSum previously
+  means there are two such subarrays with sum k whose last el is 1(at index 6) and they are [3,-3,1,1,1],[1,1,1]
+ 
+ 
  */
 
 
