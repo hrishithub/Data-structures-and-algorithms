@@ -1,4 +1,5 @@
 /*
+https://leetcode.com/problems/pascals-triangle/
 Explanation of Brute, Better & Optimal approach is provided in pdf
 */
 #include<bits/stdc++.h>

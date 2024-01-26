@@ -1,4 +1,5 @@
 /* 
+2, 2, 1, 3, 1, 1, 3, 1, 1
 Return majority element(Element that appears more than n/2 times)
 Brute: Use nested for loop TC- O(N^2) SC- O(1)
 Better: Use hashing (element with freq >n/2 is maj el) TC- If ordered map use O(NlogN) else O(N) SC-O(N)
