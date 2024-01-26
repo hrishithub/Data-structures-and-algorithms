@@ -20,8 +20,8 @@ int findCombination(int n, int r) {
 }
 
 int main(){
-    int n=4,r=2;
-   cout<<n<<"c"<<r<<" is"<< findCombination(n,r);
+    int n=10,r=3;
+   cout<<n<<"c"<<r<<" is "<< findCombination(n,r);
 }
 
 
