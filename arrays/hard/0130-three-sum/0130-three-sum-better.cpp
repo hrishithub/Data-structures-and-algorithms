@@ -1,16 +1,19 @@
 /*
+a[i]+a[j]+a[k]=0
+https://leetcode.com/problems/3sum/
 Brute: Using three nested for loops
 Time Complexity: O(N^3 * log(no. of unique triplets)), where N = size of the array.
 Reason: Here, we are mainly using 3 nested loops. And inserting triplets into the set takes O(log(no. of unique triplets)) time complexity. But we are not considering the time complexity of sorting as we are just sorting 3 elements every time.
 Space Complexity: O(2 * no. of the unique triplets) as we are using a set data structure and a list to store the triplets.
-How we are making sure we are returning unique triplets?
-When we find triplet (such that a[i]+a[j]+a[k]=0) we sort it and then store it in set
-Why sort - [-1,-1,2] and [-1,2,-1] are same triplets but set will consider them as different and store separately so after sort both will become [-1,-1,2] now when will try to store set will consider them as same
 
 Better: We are avoiding one extra for loop by //a[i]+a[j]+a[k]=0 which means arr[i]+arr[j]= - a[k] so TC N^3 --> N^2
 Time Complexity: O(N^2 * log(no. of unique triplets)), where N = size of the array.
 Reason: Here, we are mainly using 2 nested loops. And inserting triplets into the set takes O(log(no. of unique triplets)) time complexity. But we are not considering the time complexity of sorting as we are just sorting 3 elements every time.
 Space Complexity: O(2 * no. of the unique triplets) + O(N) as we are using a set data structure and a list to store the triplets and extra O(N) hashset for storing the array elements in another set.
+How we are making sure we are returning unique triplets?
+When we find triplet (such that a[i]+a[j]+a[k]=0) we sort it and then store it in set
+Why sort - [-1,-1,2] and [-1,2,-1] are same triplets but set will consider them as different and store separately so after sort both will become [-1,-1,2] now when will try to store set will consider them as same
+
 */
 #include <bits/stdc++.h>
 using namespace std;
