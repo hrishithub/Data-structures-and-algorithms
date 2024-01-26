@@ -11,7 +11,7 @@ using namespace std;
 //See dry run below!
 int findAllSubarraysWithGivenSum(vector < int > & arr, int k) {
     int n = arr.size(); // size of the given array.
-    map<int,int> mpp;   //preSum --> count(how many times that preSum occurs) Explantaion below
+    unordered_map<int,int> mpp;   //preSum --> count(how many times that preSum occurs) Explantaion below
     int preSum = 0, cnt = 0;
 
     mpp[0] = 1; // Setting 0 in the map. Initially preSum is 0 so count of 0 is 1
