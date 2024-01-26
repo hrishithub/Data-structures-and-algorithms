@@ -2,7 +2,7 @@
 Brute: Run nested for loops and check all possible subarrays for sum k TC-O(N^2) SC-O(1)
 
 Better: This approach is optimal when array contains positives,negatives and zeroes
-Time complexity - O(N+NlogN) where NlogN is time to search in map which will be 1 if we use unordered_map but it can also be N^2 (which is very rare) in WC
+Time complexity - O(NlogN) where logN is time to search in map (we are doing it(searching in map) N times so overall NlogN),which will be 1 if we use unordered_map but it can also be N^2 (which is very rare) in WC
 This is because ordered map are implemented using red black trees while unordered_map are implemented using hashing so wc occur when collision freq become high so requires time to resolve it
 Space complexity- In wc O(N)
 
@@ -39,7 +39,7 @@ int getLongestSubarray(vector<int>& a, long long k) {
             maxLen=max(maxLen,length);
         }
 
-        //when array contains zero  , run algo for this input [2,0,0,0,3].
+        //when array contains zero, run algo for this input [2,0,0,0,3].
         //we won't update an el if its already in map as we want the longest subarray
         if(preSum.find(sum)!= preSum.end())
            preSum[sum]=i;
