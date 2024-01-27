@@ -23,7 +23,8 @@ vector<vector<int>> triplet(int n, vector<int> &arr) {
     set<vector<int>> st;
 
     for (int i = 0; i < n; i++) {
-        set<int> hashset;
+        set<int> hashset; //We are avoiding one extra for loop by //a[i]+a[j]+a[k]=0 which means arr[i]+arr[j]= - a[k] so TC N^3 --> N^2
+        //we are doing arr[i]+arr[j] and finding - a[k] in array if its their then we found triplet and if we put array el in hashset and find then that search op is of constant time
         for (int j = i+1; j < n; ++j) {   //a[i]+a[j]+a[k]=0 which means arr[i]+arr[j]= - a[k]
             int k= -(arr[i]+arr[j]);
             if(hashset.find(k)!=hashset.end()){

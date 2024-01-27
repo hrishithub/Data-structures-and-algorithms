@@ -40,8 +40,8 @@ int getLongestSubarray(vector<int>& a, long long k) {
         }
 
         //when array contains zero, run algo for this input [2,0,0,0,3].
-        //we won't update an el if its already in map as we want the longest subarray
-        if(preSum.find(sum)!= preSum.end())
+        //we won't update pSum if its already in map as we want the longest subarray as left as possible
+        if(preSum.find(sum)== preSum.end())
            preSum[sum]=i;
     }
 
@@ -53,8 +53,8 @@ int getLongestSubarray(vector<int>& a, long long k) {
 
 int main()
 {
-    vector<int> a = {2, 3, 5, 1, 9};
-    long long k = 10;
+    vector<int> a = {2,0,0,0,3};
+    long long k = 3;
     int len = getLongestSubarray(a, k);
     cout << "The length of the longest subarray is: " << len << "\n";
     return 0;
