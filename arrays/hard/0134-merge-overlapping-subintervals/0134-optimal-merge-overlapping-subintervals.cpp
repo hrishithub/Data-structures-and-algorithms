@@ -1,7 +1,7 @@
 /*
 https://leetcode.com/problems/merge-intervals/
-Brute: TC- O(2N) SC- O(N) To return ans in case where given array doesn't contain any overlapping intervals then ans will contain all N elements
-Optimal: Just kept on checking with previous intervals if lies in that interval then include or else form new interval  TC- O(N) SC- O(N)
+Brute: TC- O(2N+NlogN) SC- O(N) To return ans in case where given array doesn't contain any overlapping intervals then ans will contain all N elements
+Optimal: Just kept on checking with previous intervals if lies in that interval then include or else form new interval  TC- O(NlogN) SC- O(N)
 */
 #include <bits/stdc++.h>
 using namespace std;
