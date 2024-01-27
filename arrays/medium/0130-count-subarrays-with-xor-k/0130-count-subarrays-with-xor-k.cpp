@@ -2,7 +2,7 @@
 https://www.codingninjas.com/studio/problems/subarrays-with-xor-k_6826258?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=PROBLEM
 Exact similar concept as count subarrays with sum K
 Brute: Run nested for loops and check all possible subarrays for XOR K TC-O(N^2) SC-O(1)
-Optimal:
+Optimal: TC- O(NlogN) if ordered map use else O(N) and SC-O(N)
 Suppose XR is prefix XOR (till i). For ith element to be the last element of a subarray with XOR K there need someone from start with XOR X
 X^K=XR
 (X^K)^K=XR^K
@@ -13,7 +13,7 @@ using namespace std;
 //See dry run below!
 int subarraysWithXorK(vector<int> a, int k) {
     int n= a.size(); //size of array
-    map<int,int> mpp;
+    unordered_map<int,int> mpp;
     mpp[0]=1;
     int preXOR=0,cnt=0;
 
