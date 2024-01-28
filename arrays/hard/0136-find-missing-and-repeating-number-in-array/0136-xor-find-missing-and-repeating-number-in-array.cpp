@@ -48,13 +48,13 @@ vector<int> findMissingRepeatingNumbers(vector<int> a) {
 
     int zero=0, one=0;
     for (int i = 0; i < n; i++) {
-       if((a[i] & (1<<bitNo)) !=0) one= one^a[i];
-       else zero= zero^a[i];
+       if((a[i] & (1<<bitNo)) !=0) one= one^a[i]; //one club
+       else zero= zero^a[i];  //zero club
     }
 
     for (int i = 0; i < n; i++) {
-        if(((i+1) & (1<<bitNo)) !=0) one= one^(i+1);
-        else zero= zero^(i+1);
+        if(((i+1) & (1<<bitNo)) !=0) one= one^(i+1); //one club
+        else zero= zero^(i+1); //zero club
     }
 
     //Now either of one or zero contain repeating number and other contain missing number
